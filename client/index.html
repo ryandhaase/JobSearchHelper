@@ -2,11 +2,13 @@
 <html>
 <head>
   <title>Job Search Helper</title>
-  <script src="app.js"></script>
 </head>
-<body ng-app="jobhelper">
-  <script>
-    hello();
-  </script>
+<body ng-app="jobhelper" ng-controller="Todos">
+  <div ng-repeat="todo in todos">
+    {{ todo.task }} - {{ todo.job }} - {{ todo.status }}
+  </div>
+  <script src="lib/angular/angular.js"></script>
+  <script src="app.js"></script>
+  <script src="app/todos/todos.js"></script>
 </body>
 </html>
