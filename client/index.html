@@ -2,13 +2,39 @@
 <html>
 <head>
   <title>Job Search Helper</title>
+  <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css" />
 </head>
-<body ng-app="jobhelper" ng-controller="Todos">
-  <div ng-repeat="todo in todos">
-    {{ todo.task }} - {{ todo.job }} - {{ todo.status }}
+<body ng-app="jobhelper">
+  <div class="container">
+    <div class="page-header">
+      <h1>Job Search Helper</h1>
+    </div>
+
+    <div class="row" ng-controller="todosController">
+      <div class="col-md-6 col-md-offset-3">
+
+        <form ng-submit="addTask()">
+          <h3>Add New Task</h3>
+          <div class="form-group">
+            <input class="form-control" type="text" placeholder="Task" ng-model="task" />
+            <input class="form-control" type="text" placeholder="Job" ng-model="job" />
+            <input class="form-control" type="text" placeholder="Status" ng-model="status" />
+          </div>
+          <button class="btn btn-primary" type="submit">Add Task</button>
+        </form>
+
+        <div ng-repeat="todo in todos">
+          {{ todo.task }} - {{ todo.job }} - {{ todo.status }}
+        </div>
+
+      </div>
+    </div>
   </div>
   <script src="lib/angular/angular.js"></script>
-  <script src="app.js"></script>
+  <script src="lib/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+
+  <script src="app/services/services.js"></script>
   <script src="app/todos/todos.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>

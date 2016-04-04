@@ -1,13 +1,25 @@
-app.controller('Todos', [
+angular.module('jobhelper.todos', [])
+
+.controller('todosController', [
   '$scope',
-  function ($scope) {
-    $scope.todos = [
-      { task: 'todo1', status: 'not complete', job: 'xyz' },
-      { task: 'todo2', status: 'not complete', job: 'xyz' },
-      { task: 'todo3', status: 'not complete', job: 'xyz' },
-      { task: 'todo4', status: 'not complete', job: 'xyz' },
-      { task: 'todo5', status: 'not complete', job: 'xyz' },
-      { task: 'todo6', status: 'not complete', job: 'xyz' },
-    ];
+  'todosFactory',
+  function ($scope, todosFactory) {
+    $scope.todos = todosFactory.tasks.todos;
+
+    $scope.addTask = function () {
+      if (!$scope.task || $scope.task === '') {
+        return;
+      }
+
+      $scope.todos.push({
+        task: $scope.task,
+        job: $scope.job,
+        status: $scope.status,
+      });
+
+      $scope.task = '';
+      $scope.job = '';
+      $scope.status = '';
+    };
   },
 ]);
