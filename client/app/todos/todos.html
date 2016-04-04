@@ -1,0 +1,19 @@
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+
+    <form ng-submit="addTask()">
+      <h3>Add New Task</h3>
+      <div class="form-group">
+        <input class="form-control" type="text" placeholder="Task" ng-model="task" />
+        <input class="form-control" type="text" placeholder="Job" ng-model="job" />
+        <input class="form-control" type="text" placeholder="Status" ng-model="status" />
+      </div>
+      <button class="btn btn-primary" type="submit">Add Task</button>
+    </form>
+
+    <div ng-repeat="todo in todos">
+      {{ todo.task }} - {{ todo.job }} - {{ todo.status }}
+    </div>
+
+  </div>
+</div>
