@@ -6,9 +6,13 @@ angular.module('jobhelper', [
 ])
 
 .config(function ($httpProvider, $stateProvider, $urlRouterProvider) {
-  $urlRouterProvider.otherwise('todos');
+  $urlRouterProvider.otherwise('home');
 
   $stateProvider
+  .state('home', {
+    url: '/',
+    templateUrl: 'app/home/home.html',
+  })
   .state('todos', {
     url: '/todos',
     templateUrl: 'app/todos/todos.html',
