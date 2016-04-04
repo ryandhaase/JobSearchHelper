@@ -38,4 +38,4 @@ Once the project moves into development, the press release can be used as a touc
  Thanks to Job Search Helper, I was able to easily manage the job search process, and had more free time to focus on what really matters, the job search!
 
 ## Closing and Call to Action ##
- Navigate to xyz.com and start managing you job search process today!
+ Navigate to https://ryandhaase-job-search-helper.herokuapp.com/ and start managing you job search process today!
