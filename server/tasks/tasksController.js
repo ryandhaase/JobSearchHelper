@@ -8,12 +8,17 @@ module.exports = {
       res.json(tasks);
     })
     .fail(function (error) {
-      next(error)
+      next(error);
     });
   },
 
-  // newTask: function (req, res, next) {
-  //   var taskId = req.body.task;
-  //   findTask({ id: taskId })
-  // }
-}
+  newTask: function (req, res, next) {
+    Task.create(req.body), function (err, job) {
+      if (err) {
+        return handleError(err);
+      } else {
+        console.log(saved);
+      }
+    };
+  },
+};

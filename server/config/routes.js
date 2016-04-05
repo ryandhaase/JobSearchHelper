@@ -3,16 +3,10 @@
 // var helpers = require('./helpers.js'); // our custom middleware
 
 module.exports = function (app, express) {
-  // app.get('/:code', linksController.navToLink);
-  //
-  // app.post('/api/users/signin', userController.signin);
-  // app.post('/api/users/signup', userController.signup);
-  // app.get('/api/users/signedin', userController.checkAuth);
-  //
-  // // authentication middleware used to decode token and made available on the request
-  // // app.use('/api/links', helpers.decode);
-  // app.get('/api/links/', linksController.allLinks);
-  // app.post('/api/links/', linksController.newLink);
+  app.get('/api/jobs/', jobsController.allJobs);
+  app.post('/api/jobs/', jobsController.newJob);
+  app.get('/api/tasks/', jobsController.allTasks);
+  app.post('/api/tasks/', jobsController.newTask);
   //
   // // If a request is sent somewhere other than the routes above,
   // // send it through our custom error handler

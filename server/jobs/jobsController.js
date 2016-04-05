@@ -11,4 +11,14 @@ module.exports = {
       next(error);
     });
   },
+
+  newJob: function (req, res, next) {
+    Job.create(req.body), function (err, job) {
+      if (err) {
+        return handleError(err);
+      } else {
+        console.log(saved);
+      }
+    };
+  },
 };
