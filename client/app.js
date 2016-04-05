@@ -8,12 +8,12 @@ angular.module('jobhelper', [
 ])
 
 .config(function ($httpProvider, $stateProvider, $urlRouterProvider) {
-  $urlRouterProvider.otherwise('home');
+  $urlRouterProvider.otherwise('dashboard');
 
   $stateProvider
   .state('home', {
-    url: '/',
-    templateUrl: 'app/home/home.html',
+    url: '/home',
+    templateUrl: 'home/home.html',
   })
   // .state('todos', {
   //   url: '/todos',
@@ -22,7 +22,7 @@ angular.module('jobhelper', [
   // })
   .state('dashboard', {
     url: '/dashboard',
-    templateUrl: 'app/dashboard/dashboard.html',
+    templateUrl: 'dashboard/dashboard.html',
     controller: 'dashboardCtrl',
   });
 });

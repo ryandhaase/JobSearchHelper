@@ -4,6 +4,7 @@ angular.module('jobhelper.dashboard', ['ui.bootstrap', 'ngAnimate'])
   '$scope',
   'getJobsFactory',
   function ($scope, getJobsFactory) {
+    console.log('hello');
     $scope.jobs = getJobsFactory.jobs;
     $scope.tasks = getJobsFactory.tasks;
 

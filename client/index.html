@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Job Search Helper</title>
-  <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css" />
-</head>
-<body ng-app="jobhelper">
-  <div class="container">
-    <div class="page-header">
-      <h1>Job Search Helper</h1>
+  <head>
+    <title>Job Search Helper</title>
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css" />
+  </head>
+  <body ng-app="jobhelper">
+    <div class="container">
+      <div class="page-header">
+        <h1>Job Search Helper</h1>
+      </div>
+      <!-- <a ui-sref="todos">todos</a> -->
+
+      <ui-view></ui-view>
     </div>
-    <!-- <a ui-sref="todos">todos</a> -->
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <script src="lib/angular-animate/angular-animate.min.js"></script>
+    <script src="lib/angular-ui-router/release/angular-ui-router.min.js"></script>
 
-    <ui-view></ui-view>
-  </div>
-  <script src="lib/angular/angular.js"></script>
-  <script src="lib/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
-  <script src="lib/angular-animate/angular-animate.min.js"></script>
-  <script src="lib/angular-ui-router/release/angular-ui-router.min.js"></script>
-
-  <script src="app/services/services.js"></script>
-  <script src="app/todos/todos.js"></script>
-  <script src="app/jobs/jobs.js"></script>
-  <script src="app/dashboard/dashboard.js"></script>
-  <script src="app.js"></script>
-</body>
+    <script src="services/services.js"></script>
+    <script src="todos/todos.js"></script>
+    <script src="jobs/jobs.js"></script>
+    <script src="dashboard/dashboard.js"></script>
+    <script src="app.js"></script>
+  </body>
 </html>
