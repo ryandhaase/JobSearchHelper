@@ -1,10 +1,10 @@
 angular.module('jobhelper.todos', [])
 
-.controller('todosController', [
+.controller('todosCtrl', [
   '$scope',
-  'todosFactory',
-  function ($scope, todosFactory) {
-    $scope.todos = todosFactory.tasks.todos;
+  'getJobsFactory',
+  function ($scope, getJobsFactory) {
+    $scope.todos = [];
 
     $scope.addTask = function () {
       if (!$scope.task || $scope.task === '') {
@@ -15,6 +15,7 @@ angular.module('jobhelper.todos', [])
         task: $scope.task,
         job: $scope.job,
         status: $scope.status,
+        companyId: id,
       });
 
       $scope.task = '';
