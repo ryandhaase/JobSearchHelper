@@ -3,11 +3,11 @@ var Task = require('./tasksModel.js');
 // var util = require('../config/utils.js');
 module.exports = {
   allTasks: function (req, res, next) {
-    findAllTasks({})
+    Task.find()
     .then(function (tasks) {
       res.json(tasks);
     })
-    .fail(function (error) {
+    .catch(function (error) {
       next(error);
     });
   },

@@ -3,13 +3,20 @@ var Job = require('./jobsModel.js');
 // var util = require('../config/utils.js');
 module.exports = {
   allJobs: function (req, res, next) {
-    findAllJobs({})
-    .then(function (tasks) {
-      res.json(tasks);
+    Job.find()
+    .then(function (jobs) {
+      res.json(jobs);
     })
-    .fail(function (error) {
+    .catch(function (error) {
       next(error);
     });
+
+    // .then(function (tasks) {
+    //   res.json(tasks);
+    // })
+    // .fail(function (error) {
+    //   next(error);
+    // });
   },
 
   newJob: function (req, res, next) {
