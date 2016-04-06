@@ -10,13 +10,6 @@ module.exports = {
     .catch(function (error) {
       next(error);
     });
-
-    // .then(function (tasks) {
-    //   res.json(tasks);
-    // })
-    // .fail(function (error) {
-    //   next(error);
-    // });
   },
 
   newJob: function (req, res, next) {

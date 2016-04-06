@@ -13,12 +13,13 @@ angular.module('jobhelper.dashboard', ['ui.bootstrap', 'ngAnimate'])
     $scope.getJobs = function () {
       getFactory.getJobs().then(function (jobs) {
         $scope.jobs.jobs = jobs;
+        console.log($scope.jobs.jobs);
       });
     };
 
     $scope.getTasks = function () {
       getFactory.getTasks().then(function (tasks) {
-        console.log(tasks)
+        console.log(tasks);
         $scope.tasks.tasks = tasks;
       });
     };

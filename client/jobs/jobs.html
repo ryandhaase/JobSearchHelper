@@ -1,16 +1,16 @@
 <div class="row">
-  <div class="col-md-6 col-md-offset-3">
+  <div class="col-md-6 col-md-offset-3" ng-controller="jobsCtrl">
 
     <form ng-submit="addJob()" name="newCompany">
       <h3>Add New Job</h3>
       <div class="form-group">
-        <input class="form-control" type="text" placeholder="Company" ng-model="company" />
-        <input class="form-control" type="text" placeholder="Title" ng-model="title" />
-        <input class="form-control" type="text" placeholder="Description" ng-model="description" />
-        <input class="form-control" type="url" placeholder="Link" ng-model="link" />
-        <input class="form-control" type="email" placeholder="Email" ng-model="email" />
-        <input class="form-control" type="text" placeholder="Size" ng-model="size" />
-        <input class="form-control" type="funding" placeholder="Funding" ng-model="funding" />
+        <input class="form-control" type="text" placeholder="Company" ng-model="job.company" />
+        <input class="form-control" type="text" placeholder="Title" ng-model="job.title" />
+        <input class="form-control" type="text" placeholder="Description" ng-model="job.description" />
+        <input class="form-control" type="url" placeholder="Link" ng-model="job.link" />
+        <input class="form-control" type="email" placeholder="Email" ng-model="job.email" />
+        <input class="form-control" type="text" placeholder="Size" ng-model="job.size" />
+        <input class="form-control" type="funding" placeholder="Funding" ng-model="job.funding" />
       </div>
       <button class="btn btn-primary" type="submit">Add Job</button>
     </form>
@@ -18,9 +18,8 @@
     <form ng-submit="addTask()">
       <h3>Add New Task</h3>
       <div class="form-group">
-        <input class="form-control" type="text" placeholder="Task" ng-model="task" />
-        <input class="form-control" type="text" placeholder="Job" ng-model="job" />
-        <input class="form-control" type="text" placeholder="Status" ng-model="status" />
+        <input class="form-control" type="text" placeholder="Task" ng-model="task.name" />
+          <select class="form-control" ng-options="job.company for job in jobs.jobs" ng-model="selected"></select>
       </div>
       <button class="btn btn-primary" type="submit">Add Task</button>
     </form>
